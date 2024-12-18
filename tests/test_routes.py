@@ -6,13 +6,13 @@ Test cases can be run with the following:
   coverage report -m
 """
 import os
+import json
 import logging
 from unittest import TestCase
 from tests.factories import AccountFactory
 from service.common import status  # HTTP Status Codes
 from service.models import db, Account, init_db
 from service.routes import app
-from flask_talisman import Talisman
 from service import talisman
 
 DATABASE_URI = os.getenv(
